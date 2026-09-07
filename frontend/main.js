@@ -21,7 +21,7 @@ contactForm.addEventListener("submit", async function (e) {
 
     try {
 
-        const response = await fetch("http://localhost:3001/api/contact", {
+        const response = await fetch("https://laiba-portfolio-rho.vercel.app/api/contact", {
 
             method: "POST",
 
