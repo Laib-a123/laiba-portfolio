@@ -16,9 +16,22 @@ const contactRoutes = require("./routes/contactRoutes.js");
 app.use("/api/contact", contactRoutes);
 
 app.get("/", (req, res) => {
-    res.json({
-        success: true,
-        message: "Portfolio backend is running"
+    const db = require("./db/db");
+
+    db.query("SELECT 1 AS db_test", (err, result) => {
+        if (err) {
+            return res.status(500).json({
+                success: false,
+                message: "Database connection failed",
+                error: err.message
+            });
+        }
+
+        res.json({
+            success: true,
+            message: "Portfolio backend is running",
+            database: "Connected successfully"
+        });
     });
 });
 
