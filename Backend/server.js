@@ -15,6 +15,13 @@ const contactRoutes = require("./routes/contactRoutes.js");
 
 app.use("/api/contact", contactRoutes);
 
+app.get("/", (req, res) => {
+    res.json({
+        success: true,
+        message: "Portfolio backend is running"
+    });
+});
+
 const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
