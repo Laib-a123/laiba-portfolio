@@ -9,6 +9,7 @@ body {
   color: #ededed;
   background: #081b29;
 }
+
 .header {
   position: fixed;
   top: 0;
@@ -776,23 +777,30 @@ body {
   }
 }
 /* =========================================
-   MOBILE RESPONSIVE DESIGN
-   ========================================= */
+   FINAL MOBILE RESPONSIVE DESIGN
+========================================= */
 
-html,
-body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Tablet + Mobile */
 @media (max-width: 768px) {
 
-    /* ---------- HEADER ---------- */
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
 
+    * {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* HEADER */
     .header {
-        position: fixed;
         width: 100%;
         padding: 12px 15px;
         flex-direction: column;
@@ -809,33 +817,30 @@ body {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 4px;
+        gap: 8px;
     }
 
     .navbar a {
         font-size: 14px;
-        margin-left: 4px;
-        margin-right: 4px;
+        margin: 0;
     }
 
-
-    /* ---------- HOME ---------- */
-
+    /* HOME */
     .home {
         width: 100%;
         min-height: auto;
         height: auto;
-        padding: 150px 20px 60px;
+        padding: 150px 5% 60px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 50px;
+        gap: 40px;
     }
 
     .home-content {
         width: 100%;
+        min-width: 0;
         max-width: 100%;
     }
 
@@ -850,6 +855,7 @@ body {
     .home-content p {
         font-size: 16px;
         line-height: 1.5;
+        overflow-wrap: break-word;
     }
 
     .home-content p br {
@@ -857,6 +863,7 @@ body {
     }
 
     .home-sci {
+        display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 8px;
@@ -869,23 +876,21 @@ body {
         margin: 5px;
     }
 
-    .btn-box {
-        font-size: 14px;
-        padding: 11px 22px;
-    }
-
     .home-img {
-        width: 250px;
-        height: 250px;
+        width: min(70vw, 260px);
+        height: min(70vw, 260px);
         flex-shrink: 0;
     }
 
+    .home-img .img-box {
+        width: 100%;
+        height: 100%;
+    }
 
-    /* ---------- ABOUT ---------- */
-
+    /* ABOUT */
     .about {
         width: 100%;
-        padding: 70px 20px;
+        padding: 70px 5%;
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -893,13 +898,14 @@ body {
     }
 
     .about-img {
-        width: 250px;
-        height: 250px;
+        width: min(70vw, 260px);
+        height: min(70vw, 260px);
         flex-shrink: 0;
     }
 
     .about-text {
         width: 100%;
+        min-width: 0;
     }
 
     .about-text h2 {
@@ -908,18 +914,15 @@ body {
 
     .about-text h4 {
         font-size: 23px;
-        margin: 12px 0 20px;
     }
 
     .about-text p {
         font-size: 15px;
         line-height: 1.7;
-        margin-bottom: 2rem;
+        overflow-wrap: break-word;
     }
 
-
-    /* ---------- SERVICES ---------- */
-
+    /* SERVICES */
     #services {
         font-size: 16px;
         margin-bottom: 2rem;
@@ -927,24 +930,25 @@ body {
 
     .container {
         width: 100%;
-        padding: 60px 20px;
+        padding: 60px 5%;
     }
 
     .sub-title {
-        margin-top: 60px;
+        width: 100%;
+        margin-top: 50px;
         font-size: 42px;
+        text-align: center;
     }
 
     .services-list {
         width: 100%;
-        display: grid;
         grid-template-columns: 1fr;
         gap: 25px;
-        margin-top: 35px;
     }
 
     .services-list div {
         width: 100%;
+        min-width: 0;
         padding: 30px 25px;
     }
 
@@ -955,33 +959,38 @@ body {
     .services-list div p {
         font-size: 14px;
         line-height: 1.6;
+        overflow-wrap: break-word;
     }
 
-
-    /* ---------- SKILLS ---------- */
-
+    /* SKILLS */
     .skills-section {
         width: 100%;
+        padding: 50px 5%;
         display: flex;
         flex-direction: column;
-        padding: 60px 20px;
         gap: 35px;
     }
 
     .container1 {
         width: 100%;
         min-width: 0;
-        max-width: 100%;
         padding: 30px 20px;
     }
 
     .heading1 {
         font-size: 24px;
-        margin-bottom: 30px;
+    }
+
+    .Technical-bars {
+        width: 100%;
     }
 
     .Technical-bars .bar {
-        margin: 30px 0;
+        width: 100%;
+    }
+
+    .progress-line {
+        width: 100%;
     }
 
     .radial-bars {
@@ -989,13 +998,21 @@ body {
         height: 160px;
     }
 
+    .radial-bars svg {
+        width: 160px;
+        height: 160px;
+    }
 
-    /* ---------- PROJECTS ---------- */
+    .radial-bars .text {
+        transform: translateX(-50%);
+    }
 
+    /* PROJECTS */
     .main-text {
         width: 100%;
-        padding: 80px 20px 0;
-        margin-top: 80px;
+        min-width: 0;
+        padding: 60px 5% 40px;
+        margin: 0;
     }
 
     .main-text h2 {
@@ -1004,13 +1021,14 @@ body {
 
     .portfolio-content {
         width: 100%;
-        display: grid;
+        min-width: 0;
         grid-template-columns: 1fr;
         gap: 20px;
     }
 
     .row {
         width: 100%;
+        min-width: 0;
         margin-top: 25px;
         padding: 5px;
     }
@@ -1024,55 +1042,39 @@ body {
         padding: 0 20px;
     }
 
-    .layer p {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-
-
-    /* ---------- CONTACT ---------- */
-
+    /* CONTACT */
     .contact {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 40px;
-        padding: 70px 20px;
-        margin-top: 70px;
+        padding: 60px 5%;
+        margin-top: 50px;
     }
 
-    .contact-text {
+    .contact-text,
+    .contact-form {
         width: 100%;
+        min-width: 0;
     }
 
     .contact-text h2 {
         font-size: 48px;
     }
 
-    .contact-text h4 {
-        font-size: 20px;
-    }
-
     .contact-text p {
         width: 100%;
-        max-width: 100%;
         font-size: 16px;
         line-height: 1.7;
     }
 
     .contact-list {
         padding: 0;
-        margin: 0;
     }
 
     .contact-list li {
         font-size: 15px;
-        word-break: break-word;
-        margin-bottom: 12px;
-    }
-
-    .contact-form {
-        width: 100%;
+        overflow-wrap: break-word;
     }
 
     .contact-form form {
@@ -1083,21 +1085,13 @@ body {
     .contact-form textarea {
         width: 100%;
         max-width: 100%;
-        font-size: 14px;
     }
 
     .contact-form textarea {
         height: 150px;
     }
 
-    .contact-form .send {
-        padding: 12px 35px;
-        font-size: 16px;
-    }
-
-
-    /* ---------- FOOTER ---------- */
-
+    /* FOOTER */
     .last-text {
         width: 100%;
     }
@@ -1109,7 +1103,6 @@ body {
         padding: 20px 10px;
     }
 
-    /* Back to top button */
     .top {
         right: 15px;
         bottom: 15px;
@@ -1119,7 +1112,7 @@ body {
 
 /* =========================================
    SMALL PHONES
-   ========================================= */
+========================================= */
 
 @media (max-width: 480px) {
 
@@ -1127,20 +1120,14 @@ body {
         padding: 10px 8px;
     }
 
-    .logo {
-        font-size: 20px;
-    }
-
     .navbar a {
         font-size: 12px;
-        margin-left: 2px;
-        margin-right: 2px;
+        margin: 0 2px;
     }
 
     .home {
         padding-left: 15px;
         padding-right: 15px;
-        padding-top: 145px;
     }
 
     .home-content h3 {
@@ -1155,7 +1142,8 @@ body {
         font-size: 14px;
     }
 
-    .home-img {
+    .home-img,
+    .about-img {
         width: 220px;
         height: 220px;
     }
@@ -1163,11 +1151,6 @@ body {
     .about {
         padding-left: 15px;
         padding-right: 15px;
-    }
-
-    .about-img {
-        width: 220px;
-        height: 220px;
     }
 
     .about-text h2 {
@@ -1218,4 +1201,3 @@ body {
         font-size: 40px;
     }
 }
-
