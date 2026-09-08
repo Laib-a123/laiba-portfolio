@@ -70,7 +70,7 @@ body {
   background-size: 600% 600%;
   animation: glowBorder 10s ease infinite;
 
-  box-shadow: 0 0 25px #0ef, 0 0 50px , 0 0 100px #0ef,
+  box-shadow: 0 0 25px #0ef, 0 0 50px #0ef , 0 0 100px #0ef,
     0 0 150px rgba(0, 0, 0, 0.6);
 }
 
@@ -204,7 +204,7 @@ body {
   background: linear-gradient(270deg, #0ef,  #0ef);
   background-size: 600% 600%;
   animation: glowBorder 10s ease infinite;
-  box-shadow: 0 0 25px #0ef, 0 0 50px,
+  box-shadow: 0 0 25px #0ef, 0 0 50px #0ef,
               0 0 100px #0ef, 0 0 150px rgba(0, 0, 0, 0.6);
 }
 
@@ -273,7 +273,6 @@ body {
   padding: 40px;
   font-size: 13px;
   font-weight: 400;
-  border-right: 10px;
   border-radius: 20px;
   transition: background 0.5s , transform 0.5s;
   box-shadow: 1px 1px 20px #0ef,
@@ -777,32 +776,28 @@ body {
   }
 }
 /* =========================================
-   FINAL MOBILE RESPONSIVE DESIGN
+   FINAL MOBILE RESPONSIVE FIX
 ========================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+svg {
+    max-width: 100%;
+}
 
 @media (max-width: 768px) {
 
-    html,
-    body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-    }
+    /* ---------- HEADER ---------- */
 
-    * {
-        box-sizing: border-box;
-        max-width: 100%;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* HEADER */
     .header {
         width: 100%;
-        padding: 12px 15px;
+        padding: 12px 10px;
         flex-direction: column;
         gap: 10px;
     }
@@ -817,45 +812,53 @@ body {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 6px;
     }
 
     .navbar a {
-        font-size: 14px;
+        font-size: 13px;
         margin: 0;
+        white-space: nowrap;
     }
 
-    /* HOME */
+
+    /* ---------- HOME ---------- */
+
     .home {
         width: 100%;
         min-height: auto;
         height: auto;
-        padding: 150px 5% 60px;
+        padding: 150px 15px 60px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-align: center;
         gap: 40px;
+        overflow: hidden;
     }
 
     .home-content {
         width: 100%;
-        min-width: 0;
         max-width: 100%;
+        min-width: 0;
     }
 
     .home-content h3 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .home-content h1 {
-        font-size: 42px;
+        font-size: 40px;
+        word-wrap: break-word;
     }
 
     .home-content p {
-        font-size: 16px;
-        line-height: 1.5;
-        overflow-wrap: break-word;
+        width: 100%;
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.6;
+        overflow-wrap: anywhere;
     }
 
     .home-content p br {
@@ -863,6 +866,7 @@ body {
     }
 
     .home-sci {
+        width: 100%;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
@@ -873,13 +877,17 @@ body {
     .home-sci a {
         width: 38px;
         height: 38px;
-        margin: 5px;
+        margin: 4px;
+        flex-shrink: 0;
     }
 
     .home-img {
-        width: min(70vw, 260px);
-        height: min(70vw, 260px);
+        width: 240px;
+        height: 240px;
+        max-width: 240px;
+        max-height: 240px;
         flex-shrink: 0;
+        margin: 0 auto;
     }
 
     .home-img .img-box {
@@ -887,24 +895,33 @@ body {
         height: 100%;
     }
 
-    /* ABOUT */
+
+    /* ---------- ABOUT ---------- */
+
     .about {
         width: 100%;
-        padding: 70px 5%;
+        max-width: 100%;
+        padding: 70px 15px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 40px;
         text-align: center;
+        overflow: hidden;
     }
 
     .about-img {
-        width: min(70vw, 260px);
-        height: min(70vw, 260px);
+        width: 240px;
+        height: 240px;
+        max-width: 240px;
+        max-height: 240px;
         flex-shrink: 0;
+        margin: 0 auto;
     }
 
     .about-text {
         width: 100%;
+        max-width: 100%;
         min-width: 0;
     }
 
@@ -913,68 +930,94 @@ body {
     }
 
     .about-text h4 {
-        font-size: 23px;
+        font-size: 22px;
     }
 
     .about-text p {
+        width: 100%;
+        max-width: 100%;
         font-size: 15px;
         line-height: 1.7;
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
     }
 
-    /* SERVICES */
+
+    /* ---------- SERVICES ---------- */
+
     #services {
+        width: 100%;
+        max-width: 100%;
         font-size: 16px;
         margin-bottom: 2rem;
+        overflow: hidden;
     }
 
     .container {
         width: 100%;
-        padding: 60px 5%;
+        max-width: 100%;
+        padding: 60px 15px;
     }
 
     .sub-title {
         width: 100%;
+        max-width: 100%;
         margin-top: 50px;
-        font-size: 42px;
+        font-size: 40px;
         text-align: center;
     }
 
     .services-list {
         width: 100%;
-        grid-template-columns: 1fr;
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
         gap: 25px;
     }
 
     .services-list div {
         width: 100%;
+        max-width: 100%;
         min-width: 0;
-        padding: 30px 25px;
+        padding: 30px 20px;
+        overflow: hidden;
     }
 
     .services-list div h2 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .services-list div p {
+        width: 100%;
         font-size: 14px;
         line-height: 1.6;
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
     }
 
-    /* SKILLS */
+
+    /* ---------- SKILLS ---------- */
+
     .skills-section {
         width: 100%;
-        padding: 50px 5%;
+        max-width: 100%;
+        padding: 50px 15px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 35px;
+        overflow: hidden;
+    }
+
+    .skills-section .sub-title {
+        width: 100%;
+        margin: 0 0 10px;
     }
 
     .container1 {
         width: 100%;
+        max-width: 100%;
         min-width: 0;
         padding: 30px 20px;
+        overflow: hidden;
     }
 
     .heading1 {
@@ -983,124 +1026,181 @@ body {
 
     .Technical-bars {
         width: 100%;
+        max-width: 100%;
     }
 
     .Technical-bars .bar {
         width: 100%;
+        max-width: 100%;
     }
 
-    .progress-line {
+    .Technical-bars .bar .progress-line {
         width: 100%;
+        max-width: 100%;
     }
 
     .radial-bars {
         width: 100%;
+        max-width: 100%;
         height: 160px;
+        position: relative;
     }
 
     .radial-bars svg {
         width: 160px;
         height: 160px;
+        max-width: 160px;
     }
 
     .radial-bars .text {
+        left: 50%;
         transform: translateX(-50%);
+        white-space: normal;
     }
 
-    /* PROJECTS */
+
+    /* ---------- PROJECTS ---------- */
+
+    .project-section {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
     .main-text {
         width: 100%;
+        max-width: 100%;
         min-width: 0;
-        padding: 60px 5% 40px;
+        padding: 60px 15px 40px;
         margin: 0;
+        overflow: hidden;
     }
 
     .main-text h2 {
-        font-size: 42px;
+        font-size: 40px;
+        word-wrap: break-word;
     }
 
     .portfolio-content {
         width: 100%;
+        max-width: 100%;
         min-width: 0;
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
         gap: 20px;
     }
 
     .row {
         width: 100%;
+        max-width: 100%;
         min-width: 0;
         margin-top: 25px;
         padding: 5px;
+        overflow: hidden;
     }
 
     .row img {
         width: 100%;
+        max-width: 100%;
         height: auto;
     }
 
     .layer {
-        padding: 0 20px;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 15px;
     }
 
-    /* CONTACT */
+    .layer p {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
     .contact {
         width: 100%;
+        max-width: 100%;
         display: flex;
         flex-direction: column;
         gap: 40px;
-        padding: 60px 5%;
+        padding: 60px 15px;
         margin-top: 50px;
+        overflow: hidden;
     }
 
     .contact-text,
     .contact-form {
         width: 100%;
+        max-width: 100%;
         min-width: 0;
     }
 
     .contact-text h2 {
-        font-size: 48px;
+        font-size: 46px;
+        word-wrap: break-word;
     }
 
     .contact-text p {
         width: 100%;
-        font-size: 16px;
+        max-width: 100%;
+        font-size: 15px;
         line-height: 1.7;
+        overflow-wrap: anywhere;
     }
 
     .contact-list {
+        width: 100%;
+        max-width: 100%;
         padding: 0;
     }
 
     .contact-list li {
-        font-size: 15px;
-        overflow-wrap: break-word;
+        width: 100%;
+        max-width: 100%;
+        font-size: 14px;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
     }
 
     .contact-form form {
         width: 100%;
+        max-width: 100%;
     }
 
     .contact-form input,
     .contact-form textarea {
         width: 100%;
         max-width: 100%;
+        min-width: 0;
     }
 
     .contact-form textarea {
         height: 150px;
     }
 
-    /* FOOTER */
+
+    /* ---------- FOOTER ---------- */
+
     .last-text {
         width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
 
     .last-text p {
         width: 100%;
+        max-width: 100%;
         font-size: 13px;
-        margin-top: 30px;
         padding: 20px 10px;
+        margin-top: 30px;
+        overflow-wrap: anywhere;
     }
 
     .top {
@@ -1111,18 +1211,22 @@ body {
 
 
 /* =========================================
-   SMALL PHONES
+   VERY SMALL PHONES
 ========================================= */
 
 @media (max-width: 480px) {
 
     .header {
-        padding: 10px 8px;
+        padding: 10px 6px;
+    }
+
+    .navbar {
+        gap: 4px;
     }
 
     .navbar a {
-        font-size: 12px;
-        margin: 0 2px;
+        font-size: 11px;
+        margin: 0 1px;
     }
 
     .home {
@@ -1131,11 +1235,11 @@ body {
     }
 
     .home-content h3 {
-        font-size: 22px;
+        font-size: 21px;
     }
 
     .home-content h1 {
-        font-size: 36px;
+        font-size: 34px;
     }
 
     .home-content p {
@@ -1144,8 +1248,10 @@ body {
 
     .home-img,
     .about-img {
-        width: 220px;
-        height: 220px;
+        width: 210px;
+        height: 210px;
+        max-width: 210px;
+        max-height: 210px;
     }
 
     .about {
@@ -1154,11 +1260,11 @@ body {
     }
 
     .about-text h2 {
-        font-size: 36px;
+        font-size: 35px;
     }
 
     .about-text h4 {
-        font-size: 20px;
+        font-size: 19px;
     }
 
     .about-text p {
@@ -1171,7 +1277,7 @@ body {
     }
 
     .sub-title {
-        font-size: 36px;
+        font-size: 35px;
     }
 
     .skills-section {
@@ -1189,7 +1295,7 @@ body {
     }
 
     .main-text h2 {
-        font-size: 36px;
+        font-size: 35px;
     }
 
     .contact {
@@ -1198,6 +1304,6 @@ body {
     }
 
     .contact-text h2 {
-        font-size: 40px;
+        font-size: 38px;
     }
 }
