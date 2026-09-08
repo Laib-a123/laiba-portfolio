@@ -1522,3 +1522,18 @@ svg {
     font-size: 38px;
   }
 }
+/* =========================================
+   DESKTOP ONLY - MY SKILLS HEADING CENTER
+   Mobile layout will NOT be affected
+========================================= */
+
+@media (min-width: 769px) {
+
+  .skills-section .sub-title {
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+}
