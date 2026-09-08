@@ -241,9 +241,13 @@ body {
   margin: 15px 0 30px;
 }
 .about-text p{
+  width: 100%;
+    max-width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+    text-align: justify;
   color: aliceblue;
-  font-size: 11px;
-  line-height: 1.4;
   margin-bottom: 4rem;
 }
 #services{
