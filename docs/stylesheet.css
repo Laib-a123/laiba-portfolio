@@ -783,3 +783,645 @@ body {
     transform: translateX(0px);
   }
 }
+/* =========================================
+   FINAL MOBILE RESPONSIVE FIX
+========================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+
+  /* ---------- HEADER ---------- */
+
+  .header {
+    width: 100%;
+    padding: 15px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
+  .navbar a {
+    font-size: 16px;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+
+  /* ---------- HOME ---------- */
+
+  .home {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding: 170px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 35px;
+    box-sizing: border-box;
+  }
+
+  /* PICTURE FIRST */
+
+  .home-img {
+    order: 1;
+
+    width: 240px;
+    height: 240px;
+
+    max-width: 240px;
+    max-height: 240px;
+
+    flex-shrink: 0;
+
+    margin: 0 auto;
+  }
+
+  .home-img .img-box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .home-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* TEXT SECOND */
+  .home-content {
+    order: 2;
+
+    width: 100%;
+    max-width: 600px;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .home-content h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .home-content h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .home-content p {
+    width: 100%;
+    max-width: 550px;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    margin: 15px auto;
+
+    overflow-wrap: anywhere;
+  }
+
+  .home-content p br {
+    display: none;
+  }
+
+  /* SOCIAL MEDIA BUTTONS */
+
+  .home-sci {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin: 20px 0;
+  }
+
+  .home-sci a {
+    width: 42px;
+    height: 42px;
+
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+  }
+
+  .home-sci a i {
+    font-size: 22px;
+  }
+
+  /* MORE ABOUT ME BUTTON */
+
+  .home-content .btn-box {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+
+    font-size: 16px;
+
+    padding: 12px 24px;
+
+    width: auto;
+    max-width: 100%;
+
+    white-space: nowrap;
+  }
+}
+
+/* ---------- ABOUT ---------- */
+
+.about {
+  width: 100%;
+  max-width: 100%;
+  padding: 70px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-img {
+  width: 240px;
+  height: 240px;
+  max-width: 240px;
+  max-height: 240px;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+
+.about-text {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.about-text h2 {
+  font-size: 42px;
+}
+
+.about-text h4 {
+  font-size: 22px;
+}
+
+.about-text p {
+  width: 100%;
+  max-width: 100%;
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+
+/* ---------- SERVICES ---------- */
+
+#services {
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding: 60px 15px;
+}
+
+.sub-title {
+  width: 100%;
+  max-width: 100%;
+  margin-top: 50px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.services-list {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 25px;
+}
+
+.services-list div {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 30px 20px;
+  overflow: hidden;
+}
+
+.services-list div h2 {
+  font-size: 24px;
+}
+
+.services-list div p {
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+
+/* ---------- SKILLS ---------- */
+
+.skills-section {
+  width: 100%;
+  max-width: 100%;
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  overflow: hidden;
+}
+
+.skills-section .sub-title {
+  width: 100%;
+  margin: 0 0 10px;
+}
+
+.container1 {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 30px 20px;
+  overflow: hidden;
+}
+
+.heading1 {
+  font-size: 24px;
+}
+
+.Technical-bars {
+  width: 100%;
+  max-width: 100%;
+}
+
+.Technical-bars .bar {
+  width: 100%;
+  max-width: 100%;
+}
+
+.Technical-bars .bar .progress-line {
+  width: 100%;
+  max-width: 100%;
+}
+
+.radial-bars {
+  width: 100%;
+  max-width: 100%;
+  height: 160px;
+  position: relative;
+}
+
+.radial-bars svg {
+  width: 160px;
+  height: 160px;
+  max-width: 160px;
+}
+
+.radial-bars .text {
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: normal;
+}
+
+
+/* ---------- PROJECTS ---------- */
+
+.project-section {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.main-text {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  padding: 60px 15px 40px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.main-text h2 {
+  font-size: 40px;
+  word-wrap: break-word;
+}
+
+.portfolio-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 20px;
+}
+
+.row {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-top: 25px;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.row img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.layer {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.layer p {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 15px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.contact-text,
+.contact-form {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.contact-text h2 {
+  font-size: 46px;
+  word-wrap: break-word;
+}
+
+.contact-text p {
+  width: 100%;
+  max-width: 100%;
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.contact-list {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.contact-list li {
+  width: 100%;
+  max-width: 100%;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact-form form {
+  width: 100%;
+  max-width: 100%;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.last-text {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.last-text p {
+  width: 100%;
+  max-width: 100%;
+  font-size: 13px;
+  padding: 20px 10px;
+  margin-top: 30px;
+  overflow-wrap: anywhere;
+}
+
+.top {
+  right: 15px;
+  bottom: 15px;
+}
+
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 480px) {
+
+  .header {
+    .header {
+      padding: 14px 8px;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 25px;
+    }
+
+    .navbar {
+      gap: 7px 10px;
+    }
+
+    .navbar a {
+      font-size: 14px;
+
+    }
+
+    .home {
+      padding: 155px 15px 60px;
+      gap: 30px;
+    }
+
+    /* PICTURE */
+
+    .home-img {
+      width: 220px;
+      height: 220px;
+
+      max-width: 220px;
+      max-height: 220px;
+    }
+
+    /* TEXT */
+    .home-content h3 {
+      font-size: 22px;
+    }
+
+    .home-content h1 {
+      font-size: 36px;
+    }
+
+    .home-content p {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* SOCIAL BUTTONS */
+
+    .home-sci {
+      gap: 8px;
+      margin: 18px 0;
+    }
+
+    .home-sci a {
+      width: 40px;
+      height: 40px;
+    }
+
+
+    /* BUTTON */
+
+    .home-content .btn-box {
+      font-size: 15px;
+      padding: 11px 22px;
+    }
+  }
+
+  .home-img,
+  .about-img {
+    width: 210px;
+    height: 210px;
+    max-width: 210px;
+    max-height: 210px;
+  }
+
+  .about {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .about-text h2 {
+    font-size: 35px;
+  }
+
+  .about-text h4 {
+    font-size: 19px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .sub-title {
+    font-size: 35px;
+  }
+
+  .skills-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .container1 {
+    padding: 25px 15px;
+  }
+
+  .main-text {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .main-text h2 {
+    font-size: 35px;
+  }
+
+  .contact {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contact-text h2 {
+    font-size: 38px;
+  }
+}
