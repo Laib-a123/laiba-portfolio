@@ -988,7 +988,7 @@ svg {
 
     font-size: 16px;
     line-height: 1.7;
-
+    text-align: justify;
     margin: 15px auto;
 
     overflow-wrap: anywhere;
