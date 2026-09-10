@@ -291,6 +291,7 @@ body {
 }
 .services-list div h2{
   font-size: 30px;
+  text-align: justify;
   margin-bottom: 15px;
   font-weight: 500;
 }
@@ -660,6 +661,7 @@ body {
   color: #000;
   font-size: 1rem;
   line-height: 1.8;
+  text-align: justify;
 }
 .layer i{
   color: #ff004f;
@@ -692,6 +694,7 @@ body {
 .contact-text h2 {
   font-size: 80px;
   line-height: 1.1;
+  text-align: justify;
 }
 .contact-text h2 span {
   color: #0ef;
@@ -707,6 +710,7 @@ body {
 .contact-text p {
   color: #aaa;
   font-size: 18px;
+  text-align: justify;
   line-height: 30px;
   margin-bottom: 2rem;
   max-width: 500px;
