@@ -102,6 +102,7 @@ body {
 
 .home-content {
   max-width: 600px;
+  text-align: justify;
 }
 .home-content h3 {
   font-size: 32px;
@@ -1086,6 +1087,7 @@ svg {
     width: 100%;
     max-width: 100%;
     min-width: 0;
+
   }
 
   .about-text h2 {
