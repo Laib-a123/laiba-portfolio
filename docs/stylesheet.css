@@ -397,19 +397,42 @@ body {
   transform: scaleX(0);
   transform-origin: left;
 }
-.progress-line.html span{
+/* ================================
+   TECHNICAL SKILLS PERCENTAGES
+================================ */
+
+.progress-line.html span {
   width: 90%;
 }
-.progress-line.css span{
-  width: 60%;
-}.progress-line.javascript span{
+
+.progress-line.css span {
   width: 85%;
-}.progress-line.python span{
-  width: 50%;
 }
-.progress-line.react span{
+
+.progress-line.javascript span {
+  width: 80%;
+}
+
+.progress-line.typescript span {
   width: 75%;
 }
+
+.progress-line.react span {
+  width: 85%;
+}
+
+.progress-line.node span {
+  width: 80%;
+}
+
+.progress-line.express span {
+  width: 80%;
+}
+
+.progress-line.mysql span {
+  width: 85%;
+}
+
 .progress-line span::after{
   position: absolute;
   padding:1px 8px;
@@ -422,20 +445,40 @@ body {
   animation: showText 0.5s 1.5s linear forwards ;
   opacity: 0;
 }
-.progress-line.html span::after{
+/* ================================
+   PERCENTAGE LABELS
+================================ */
+
+.progress-line.html span::after {
   content: "90%";
 }
-.progress-line.css span::after{
-  content: "60%";
-}
-.progress-line.javascript span::after{
+
+.progress-line.css span::after {
   content: "85%";
 }
-.progress-line.python span::after{
-  content: "50%";
+
+.progress-line.javascript span::after {
+  content: "80%";
 }
-.progress-line.react span::after{
+
+.progress-line.typescript span::after {
   content: "75%";
+}
+
+.progress-line.react span::after {
+  content: "85%";
+}
+
+.progress-line.node span::after {
+  content: "80%";
+}
+
+.progress-line.express span::after {
+  content: "80%";
+}
+
+.progress-line.mysql span::after {
+  content: "85%";
 }
 .progress-line span::before{
   position: absolute;
