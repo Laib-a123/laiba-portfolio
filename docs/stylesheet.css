@@ -1103,7 +1103,7 @@ svg {
 
     font-size: 15px;
     line-height: 1.7;
-
+    text-align: justify;
     overflow-wrap: anywhere;
   }
 
@@ -1316,7 +1316,7 @@ svg {
 
   .layer p {
     max-width: 100%;
-
+    text-align: justify;
     overflow-wrap: anywhere;
   }
 
@@ -1359,7 +1359,7 @@ svg {
 
     font-size: 15px;
     line-height: 1.7;
-
+    text-align: justify;
     overflow-wrap: anywhere;
   }
 
@@ -1409,14 +1409,14 @@ svg {
   .last-text {
     width: 100%;
     max-width: 100%;
-
+    text-align: justify;
     overflow: hidden;
   }
 
   .last-text p {
     width: 100%;
     max-width: 100%;
-
+    text-align: justify;
     font-size: 13px;
 
     padding: 20px 10px;
@@ -1537,6 +1537,7 @@ svg {
 
   .about-text p {
     font-size: 14px;
+    text-align: justify;
   }
 
 
@@ -1569,6 +1570,7 @@ svg {
   .main-text {
     padding-left: 15px;
     padding-right: 15px;
+    text-align: justify;
   }
 
   .main-text h2 {
