@@ -383,6 +383,19 @@ body {
   transform: scaleX(0);
   transform-origin: left;
 }
+.express-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
 @keyframes animate {
   100% {
     transform: scaleX(1);
